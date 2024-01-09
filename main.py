@@ -5,7 +5,7 @@ from datetime import datetime
 import load_google_calender
 import get_notion_data
 
-config = dotenv_values('.env')
+config = dotenv_values('private/.env')
 
 def main():
     load_google_calender.first_sync_calendar(get_notion_data.get_first_data(), config.get('CALENDAR_ID'))

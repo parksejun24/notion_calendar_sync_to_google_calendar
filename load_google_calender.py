@@ -13,7 +13,7 @@ from googleapiclient.errors import HttpError
 SCOPES = ["https://www.googleapis.com/auth/calendar"]
 creds = None
 if os.path.exists("private/token.json"):
-  creds = Credentials.from_authorized_user_file("token.json", SCOPES)
+  creds = Credentials.from_authorized_user_file("private/token.json", SCOPES)
 
 if not creds or not creds.valid:
   if creds and creds.expired and creds.refresh_token:
